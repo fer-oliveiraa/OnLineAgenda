@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda</title>
     <link rel="stylesheet" href="agenda.css"> 
-    <style>
-        /* Estilos CSS adicionais, se necessário */
-    </style>
     <script>
         // Função para atualizar o relógio
         var dayarray = new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado");
@@ -75,7 +72,7 @@
             _ler_txt_agenda('agenda.txt');
             ?>
         </div>
-        <button onclick="location.href='login.php'">Editar Agenda</button>
+        <button class="editar-agenda-button" onclick="location.href='login.php'">Editar Agenda</button>
     </div>
 
     <!-- Bloco direito do layout -->

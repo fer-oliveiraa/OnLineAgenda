@@ -1,23 +1,142 @@
+
 .quadrado {
     position: absolute;
     width: 900px;
     height: 850px;
-    top: 100px; /* Move o quadrado 100 pixels a partir do topo */
-    left: 150px; /* Move o quadrado 250 pixels a partir da esquerda */
+    top: 100px;
+    left: 150px;
     transform: translate(85%, 0%);
     display: grid;
-    place-items: center; /* Centraliza o conteúdo horizontal e verticalmente */
+    place-items: center;
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
     overflow: auto;
     border: 3px solid #175b9c;
-      
 }
 
 .quadrado::-webkit-scrollbar {
-    width: 12px; /* Largura da barra vertical */
-    height: 12px; /* Altura da barra horizontal */
+    width: 12px;
+    height: 12px;
 }
 
+.editar-agenda-button {
+    padding: 10px 20px; /* Define o preenchimento interno do botão */
+    background-color: #175b9c; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; /* Muda o cursor para um ponteiro ao passar sobre o botão */
+    font-size: 16px; 
+    transition: background-color 0.3s ease; /* Transição suave para mudança de cor de fundo */
+    position: absolute;
+    width: 500px;
+    height: 50px; 
+    top: 800px;
+    left: 150px;
+}
 
+.editar-agenda-button:hover {
+    background-color: #0e4563;
+}
+
+.login-body {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #175b9c;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-container .error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.login-container .login-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.login-container .login-button {
+    background-color: #175b9c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-container .login-button:hover {
+    background-color: #0e4563;
+}
+
+.edit-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.edit-container h1 {
+    color: #175b9c;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.edit-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.edit-container .edit-button {
+    background-color: #175b9c;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 400px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.edit-container .edit-button:hover {
+    background-color: #0e4563;
+}
