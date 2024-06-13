@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda</title>
     <link rel="stylesheet" href="agenda.css"> 
+    <style>
+        /* Estilos CSS adicionais, se necessário */
+    </style>
     <script>
         // Função para atualizar o relógio
         var dayarray = new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado");
@@ -38,45 +40,42 @@
         }
     </script>
 </head>
-
 <body onLoad="goforit()">
 
     <!-- Bloco esquerdo do layout -->
     <div style="float:left; width: 70%; height:100px; background-image: url(Oxxnline_centro_inferior.jpg);">
         <h2><span id="clock"></span></h2>
         <div class="quadrado"> 
-            
-            
-                <?php
-                // Função para ler e formatar o conteúdo do arquivo agenda.txt
-                function _ler_txt_agenda($filename) {
-                    $dir_arquivo_parametro = $filename;
-                    $data = file($dir_arquivo_parametro);
+            <?php
+            // Função para ler e formatar o conteúdo do arquivo agenda.txt
+            function _ler_txt_agenda($filename) {
+                $dir_arquivo_parametro = $filename;
+                $data = file($dir_arquivo_parametro);
 
-                    // Iterar por cada linha e aplicar a formatação desejada
-                    foreach ($data as $line) {
-                        $line = trim($line); // Remove espaços em branco do início e do fim da linha
-                        if (empty($line)) {
-                            continue; // Pular linhas vazias
-                        }
-                        if (strpos($line, '*') === 0) {
-                            // Linhas que começam com '*' são formatadas em amarelo usadas para observações
-                            echo '<h5><font color="yellow">' . htmlspecialchars($line) . '</font></h5>';
-                        } elseif (strpos($line, '-') === 0) {
-                            // Linhas que começam com '-' são formatadas em azul
-                            echo '<h5><font color="blue">' . htmlspecialchars($line) . '</font></h5>';
-                        } else {
-                            // Outras linhas são formatadas em vermelho
-                            echo '<h5><font color="red">' . htmlspecialchars($line) . '</font></h5>';
-                        }
+                // Iterar por cada linha e aplicar a formatação desejada
+                foreach ($data as $line) {
+                    $line = trim($line); // Remove espaços em branco do início e do fim da linha
+                    if (empty($line)) {
+                        continue; // Pular linhas vazias
+                    }
+                    if (strpos($line, '*') === 0) {
+                        // Linhas que começam com '*' são formatadas em amarelo usadas para observações
+                        echo '<h5><font color="yellow">' . htmlspecialchars($line) . '</font></h5>';
+                    } elseif (strpos($line, '-') === 0) {
+                        // Linhas que começam com '-' são formatadas em azul
+                        echo '<h5><font color="blue">' . htmlspecialchars($line) . '</font></h5>';
+                    } else {
+                        // Outras linhas são formatadas em vermelho
+                        echo '<h5><font color="red">' . htmlspecialchars($line) . '</font></h5>';
                     }
                 }
+            }
 
-                // Chama a função para ler e exibir o conteúdo do arquivo agenda.txt
-                _ler_txt_agenda('agenda.txt');
-                ?>
-            
+            // Chama a função para ler e exibir o conteúdo do arquivo agenda.txt
+            _ler_txt_agenda('agenda.txt');
+            ?>
         </div>
+        <button onclick="location.href='login.php'">Editar Agenda</button>
     </div>
 
     <!-- Bloco direito do layout -->
@@ -102,5 +101,4 @@
     </div>
 
 </body>
-
 </html>
