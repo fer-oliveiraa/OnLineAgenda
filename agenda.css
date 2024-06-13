@@ -1,0 +1,49 @@
+.quadrado {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    top: 100px; /* Move o quadrado 100 pixels a partir do topo */
+    left: 150px; /* Move o quadrado 250 pixels a partir da esquerda */
+    transform: translate(85%, 0%);
+    display: grid;
+    place-items: center; /* Centraliza o conteúdo horizontal e verticalmente */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    border: 3px solid #175b9c;
+    
+  
+}
+
+.quadrado::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 3px solid #175b9c;
+    border-radius: 7px;
+    z-index: -1;
+}
+
+.agenda-text {
+    margin: 0; /* Remove a margem padrão */
+    padding: 10px; /* Adiciona espaçamento interno */
+}
+
+.yellow {
+    color: yellow;
+    font-size: 2px; /* Define o tamanho do texto */
+}
+
+.blue {
+    color: blue;
+    font-size: 14px; /* Define o tamanho do texto */
+}
+
+.red {
+    color: red;
+    font-size: 15px; /* Define o tamanho do texto */
+}
